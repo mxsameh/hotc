@@ -104,11 +104,6 @@
     justify-content: space-between;
     gap: 16px;
   }
-  .facts__left, .facts__right{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
   .line{
     display: none;
   }
@@ -152,12 +147,6 @@
       background-color: transparent;
       // justify-content: flex-start;
       grid-template-columns: repeat(7,max-content);
-    }
-    .facts__left, .facts__right{
-      flex-direction: row;
-      gap: unset;
-      flex-basis: 100%;
-      justify-content: space-between;
     }
 
     .line{
