@@ -81,51 +81,50 @@
     padding: 24px 16px;
     background-color: var(--gray800);
     border-radius: 12px;
-    margin-top: 32px;
+    max-width: 500px;
+    margin: 32px auto 0;
 
     &__heading{
       color: white;
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 28px;
+      line-height: 30px;
+      text-align: center;
     }
     &__yearsList{
       display: flex;
       align-items: center;
-      // justify-content: space-between;
-      margin-top: 32px;
       gap: 24px;
+      width: fit-content;
+      margin: 32px auto 0;
     }
     &__year{
       border-radius: 8px;
       font-size: 14px;
       padding: 6px 16px;
       background-color: var(--gray300);
-      &--active{
-        background-color: var(--gray500);
-        color: white;
-      }
     }
     &__plan{
-      margin-top: 24px;
+      margin: 24px auto 0;
+      width: fit-content;
+
     }
 
   }
 
   .plan{
-
     &__details{
       margin-top: 24px;
     }
     &__heading{
-      color: var(--gray300);
+      color: white;
       font-size: 16px;
-      // list-style: disc;
+      list-style: disc;
     }
     &__text{
       color: white;
       font-size: 16px;
       font-weight: 500;
-      margin-left: 12px;
+      // margin-left: 12px;
       margin-top: 16px;
     }
 
@@ -156,11 +155,12 @@
 
   @media screen and (min-width: 767px){
     .payment{
-      padding: 32px 24px 40px;
+      padding: 32px 32px 40px;
+      max-width: none;
 
       &__heading{
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 32px;
+        line-height: 34px;
         text-align: center;
       }
       &__yearsList{
@@ -173,13 +173,23 @@
         padding: 8px 24px;
         font-weight: 500;
         border-radius: 16px;
+        &--active{
+          color: white;
+          background-color: var(--blue);
+        }
+        &:hover{
+          background-color: var(--gray500);
+          color: white;
+          cursor: pointer;
+        }
       }
       &__plan{
         display: flex;
         justify-content: space-between;
         margin: 40px auto 0;
         row-gap: 24px;
-        max-width: 750px;
+        max-width: 650px;
+        width: auto;
       }
     }
 
@@ -189,24 +199,29 @@
         margin-top: 0;
       }
       &__heading{
-        font-size: 24px;
+        font-size: 20px;
         white-space: nowrap;
       }
       &__text{
-        font-size: 24px;
+        font-size: 20px;
       }
 
     }
 
     .cust{
       &__text{
-        font-size: 32px;
-        margin-top: 40px;
+        font-size: 24px;
+        margin-top: 48px;
       }
       &__btn{
         font-size: 20px;
-        margin: 32px auto 0;
-
+        margin: 24px auto 0;
+        padding: 12px 40px;
+        transition: transform .1s linear;
+        &:hover{
+          cursor: pointer;
+          transform: scale(.9);
+        }
       }
     }
 

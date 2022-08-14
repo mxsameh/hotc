@@ -30,30 +30,28 @@
 
   <div class="unit__facts">
 
-    <div class="facts__left">
-      <!-- PRICE -->
-      <div class="fact">
-        <span class="fact__heading">price</span>
-        <span class="fact__text">{price.toLocaleString()} EGP</span>
-      </div>
-      <!-- BEDROOMS -->
-      <div class="fact">
-        <span class="fact__heading">bedrooms</span>
-        <span class="fact__text">{beds} Bedrooms</span>
-      </div>
+    <!-- PRICE -->
+    <div class="fact">
+      <span class="fact__heading">price</span>
+      <span class="fact__text">{price.toLocaleString()} EGP</span>
     </div>
-
-    <div class="facts__right">
-      <!-- AREA -->
-      <div class="fact">
-        <span class="fact__heading">area</span>
-        <span class="fact__text">{area} sqm</span>
-      </div>
-      <!-- BATHROOMS -->
-      <div class="fact">
-        <span class="fact__heading">bathrooms</span>
-        <span class="fact__text">{baths} Bathrooms</span>
-      </div>
+    <span class="line"></span>
+    <!-- BEDROOMS -->
+    <div class="fact">
+      <span class="fact__heading">bedrooms</span>
+      <span class="fact__text">{beds} Bedrooms</span>
+    </div>
+    <span class="line"></span>
+    <!-- AREA -->
+    <div class="fact">
+      <span class="fact__heading">area</span>
+      <span class="fact__text">{area} sqm</span>
+    </div>
+    <span class="line"></span>
+    <!-- BATHROOMS -->
+    <div class="fact">
+      <span class="fact__heading">bathrooms</span>
+      <span class="fact__text">{baths} Bathrooms</span>
     </div>
 
   </div>
@@ -62,17 +60,22 @@
 
 <style lang="scss">
   .unit__info{
-    margin-top: 40px;
+    max-width: 500px;
+    margin: 0 auto;
   }
   .details{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 16px;
 
     &__location, &__type{
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+    &__location{
+      margin-right: 40px;
     }
 
     &__icon{
@@ -92,14 +95,22 @@
     background-color: var(--gray100);
     border-radius: 12px;
     padding: 16px 24px;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    gap: 16px;
   }
   .facts__left, .facts__right{
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+  .line{
+    display: none;
   }
   .fact{
     display: flex;
@@ -117,6 +128,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    .unit__info{
+      max-width: none;
+
+    }
     .details{
       flex-direction: row;
       justify-content: space-between;
@@ -133,9 +148,10 @@
     .unit__facts{
       padding: 16px;
       border-radius: 12px;
-      border: 2px solid var(--gray500);
+      border: 2px solid var(--gray300);
       background-color: transparent;
-      justify-content: flex-start;
+      // justify-content: flex-start;
+      grid-template-columns: repeat(7,max-content);
     }
     .facts__left, .facts__right{
       flex-direction: row;
@@ -143,6 +159,13 @@
       flex-basis: 100%;
       justify-content: space-between;
     }
+
+    .line{
+      display: block;
+      height: 100%;
+      border: 1px solid var(--gray300);
+    }
+
   }
   
 </style>
