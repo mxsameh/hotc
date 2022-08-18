@@ -4,7 +4,7 @@
     isOpened = !isOpened;
     // console.log( 'Is menu opened ?', isOpened );
   }
-  let color = 'black';
+  export let color = 'black';
 
 </script>
 
@@ -65,18 +65,24 @@
       gap: 32px;
     }
     &__link{
-      font-size: 24px;
+      font-size: 20px;
       text-transform: capitalize;
     }
 
     &__btn{
       text-transform: capitalize;
-      font-size: 20px;
+      font-size: 16px;
       color: white;
       background-color: var(--blue);
       padding: 8px 24px;
       border-radius: 4px;
       margin-left: 40px;
+
+      &:hover{
+        cursor: pointer;
+        background-color: rgba($color: #1A73E8, $alpha: .8);
+        color: black;
+      }
     }
 
   }

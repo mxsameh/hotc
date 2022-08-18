@@ -31,11 +31,11 @@
       <div class="social">
         <h2 class="social__heading">follow us</h2>
         <ul class="social__list">
-          <a href="/"><img class="social__icon" src="./fb-icon.svg" alt=""></a>
-          <a href="/"><img class="social__icon" src="./ig-icon.svg" alt=""></a>
-          <a href="/"><img class="social__icon" src="./twt-icon.svg" alt=""></a>
-          <a href="/"><img class="social__icon" src="./yt-icon.svg" alt=""></a>
-          <a href="/"><img class="social__icon" src="./in-icon.svg" alt=""></a>
+          <a href="/"><img class="social__icon" src="/fb-icon.svg" alt=""></a>
+          <a href="/"><img class="social__icon" src="/ig-icon.svg" alt=""></a>
+          <a href="/"><img class="social__icon" src="/twt-icon.svg" alt=""></a>
+          <a href="/"><img class="social__icon" src="/yt-icon.svg" alt=""></a>
+          <a href="/"><img class="social__icon" src="/in-icon.svg" alt=""></a>
         </ul>
       </div>
       
